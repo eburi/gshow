@@ -20,7 +20,6 @@ void setup() {
   for(int i=0; i < imageCount; i++) {
     var num = i < 10 ? "0" + i : i;
     var filename = "/gshow/pics/mario_run_" + num + ".png";
-    println("loading: " + filename);
     marios[i] = loadImage(filename);
   }
   frameRate(6);
@@ -38,7 +37,6 @@ void draw(){
 
   if( on ) {
     var idx = (cMario++ % imageCount );
-    println("cMario-idx:"+  idx);
     image(marios[idx], 0, 0);
   }
 }
